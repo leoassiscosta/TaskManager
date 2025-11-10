@@ -1,0 +1,74 @@
+# .NET / C# .gitignore
+
+# Build results
+bin/
+obj/
+out/
+artifacts/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+# Except build/restore lock
+!packages/build/
+!packages/repositories.config
+
+# Project files
+*.cache
+*.pdb
+*.mdb
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# DotCover
+.idea.DotSettings
+*.dotCover
+
+# Azure
+*.publishsettings
+*.pubxml
+*.pubxml.user
+
+# Docker
+docker-compose.override.yml
+**/Dockerfile.*.backup
+
+# Secrets / Environment
+*.env
+appsettings.Development.json
+appsettings.Local.json
+
+# Node (Blazor WASM with JS interop)
+node_modules/
+
+# MAUI / Mobile
+*.aab
+*.apk
+*.ipa
+*/platforms/*
+
+# Generated
+wwwroot/
