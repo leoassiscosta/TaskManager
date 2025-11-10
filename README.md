@@ -6,12 +6,7 @@ API RESTful para gerenciamento de tarefas e projetos, desenvolvida com **ASP.NET
 
 ## 🚀 Execução Rápida com Docker
 
-### Opção 1: Script Automático (Linux/Mac)
-```bash
-./start.sh
-```
-
-### Opção 2: Docker Compose Manual
+### Docker Compose Manual
 ```bash
 docker-compose up -d
 ```
