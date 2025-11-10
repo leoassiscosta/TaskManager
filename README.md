@@ -146,27 +146,7 @@ docker-compose down
 docker-compose up -d --build
 ```
 
-Ver [DOCKER.md](DOCKER.md) para documentação completa.
 
----
-
-## 💻 Execução sem Docker
-
-### 1. Configurar Banco
-```bash
-# Criar banco PostgreSQL
-createdb taskmanagement
-```
-
-### 2. Configurar Connection String
-Edite `src/TaskManagement.API/appsettings.Development.json`:
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Database=taskmanagement;Username=postgres;Password=postgres"
-  }
-}
-```
 
 ### 3. Executar
 ```bash
@@ -195,10 +175,6 @@ curl -X POST http://localhost:5000/api/projects \
   -d '{"name":"Novo Projeto","description":"Descrição","userId":"guid"}'
 ```
 
-### Via arquivo .http
-Abra `src/TaskManagement.API/TaskManagement.http` no VS Code ou Rider.
-
----
 
 ## 📊 Tecnologias Utilizadas
 
@@ -213,34 +189,6 @@ Abra `src/TaskManagement.API/TaskManagement.http` no VS Code ou Rider.
 
 ---
 
-## 📁 Estrutura de Diretórios
-
-```
-TaskManagementAPI/
-├── src/
-│   ├── TaskManagement.API/            # 🌐 REST API
-│   ├── TaskManagement.Application/    # 💼 Lógica de negócio
-│   ├── TaskManagement.Domain/         # 📦 Entidades e regras
-│   └── TaskManagement.Infrastructure/ # 🗄️ EF Core e repositórios
-├── tests/
-│   └── TaskManagement.Tests/          # 🧪 Testes unitários
-├── docker-compose.yml                  # 🐳 Docker Compose
-├── Dockerfile                          # 🐳 Dockerfile da API
-├── start.sh                            # 🚀 Script de start
-├── stop.sh                             # 🛑 Script de stop
-└── README.md                           # 📚 Este arquivo
-```
-
----
-
-## 📚 Documentação Completa
-
-- **[DOCKER.md](DOCKER.md)** - Guia completo do Docker
-- **[API-CONTROLLERS.md](API-CONTROLLERS.md)** - Documentação dos endpoints
-- **[INFRASTRUCTURE.md](INFRASTRUCTURE.md)** - Arquitetura do banco
-- **[SERVICES.md](SERVICES.md)** - Lógica de negócio
-
----
 
 ## 🤝 Como Contribuir
 
